@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,600;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&family=Oswald:wght@200;300;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,600;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,900&display=swap');
+body {
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+/* .folding-text {
+  color: transparent;
+  background: #666666;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+  } */
+#root{
+  height: 100%;
+}
+.Kalnia{
+  font-family: "Kalnia", serif;
+}
+.folding-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px; 
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: bolder;
+  font-style: normal;
+}
+
+.letter {
+  display: inline-block;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+
+
+/* src/components/Navbar.css */
+.navbar {
+  background-color: #141414;
+  padding: 15px 20px;
+  position: fixed;
+  top: 0;
+  /* gap:'20px'; */
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  gap: 50px;
+  /* z-index: 30; */
+}
+
+.navbar-links li {
+  margin: 0 20px;
+}
+.page-text{
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: bolder;
+  font-style: normal;
+}
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #00007c;
+}
+.portfolio{
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+
+
+.wrapper {
+  display: flex;           /* Use flexbox for alignment */
+  align-items: center;     /* Vertically center the content */
+}
+
+.wrapper:before {
+  content: "";
+  width: 50px;             /* Set the length of the line */
+  height: 2px;   
+  margin: 40px 60px;          /* Set the thickness of the line */
+  background-color: rgb(0, 0, 0); /* Black color for the line */
+  margin-right: 10px;  
+  vertical-align: super;
+
+}
+
+#canvas2 {
+  top: 55px;
+  left: 0;
+  width:  100%;
+  height: 100% ;
+  display: block;
+  position: fixed;
+  z-index: 10;
+}
+
+.line-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #0b183a; /* Same as the background color */
+}
+.word {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+
+@layer components{
+  .image{
+    -webkit-mask-image: url(public/o.png);
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    height: 100%;
+  }
+  .text-stroke{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: white;
+    -webkit-text-stroke-width :1px ;
+  }
+}
+.perspective{
+  perspective: 2200px;
+}
