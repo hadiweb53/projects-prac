@@ -5,6 +5,7 @@ import Model from "./Model";
 import Page2 from "./Page2";
 import Cursor2 from './assets/Cursor/Cursor2'
 import CanvasCursor from './assets/Cursor/CanvasCursor'
+import TextReveal from "./TextReveal";
 // import Page3 from './Page3'
 const FoldingText = () => {
   const textRef = useRef(null);
@@ -60,6 +61,7 @@ const FoldingText = () => {
      <Cursor2/>
      <Page2/>
      {/* <Page3/> */}
+     <TextReveal/>
      </>
   );
 };

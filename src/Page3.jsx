@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
+import TextReveal from './TextReveal';
 
 const HoverWidthDivs = () => {
   const [isFirstDivHovered, setIsFirstDivHovered] = useState(false);
   const [isSecondDivHovered, setIsSecondDivHovered] = useState(false);
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <>
+    <div className="flex items-center justify-center min-h-screen bg-gray-100 z-[100]">
       <div className="flex space-x-[20px]">
         <div 
           className={`
@@ -39,6 +41,8 @@ const HoverWidthDivs = () => {
         </div>
       </div>
     </div>
+    <TextReveal/>
+    </>
   );
 };
 

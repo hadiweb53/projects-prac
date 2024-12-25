@@ -4,7 +4,7 @@ import { Environment, useGLTF } from '@react-three/drei';
 import { gsap } from 'gsap';
 // import {Page2} from './Page2'
 const Model = () => {
-  const { scene } = useGLTF('/late_night_lessions.glb');
+  const { scene } = useGLTF('src/files/public/late_night_lessions.glb');
   const modelRef = useRef(null);
   const animationCompleteRef = useRef(false); // Tracks the completion of the first animation
   const targetRotation = useRef({ x: 0, y: 0 }); // Target rotation values
@@ -114,7 +114,7 @@ const App = () => {
           castShadow={true}
         />
         <Environment
-          files="HDR_112_River_Road_2_Env.hdr"
+          files="src/files/public/HDR_112_River_Road_2_Env.hdr"
           background={false}
         />
         <Model />
